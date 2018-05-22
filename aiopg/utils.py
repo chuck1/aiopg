@@ -12,11 +12,7 @@ if PY_35:
 else:
     base = object
 
-try:
-    ensure_future = asyncio.ensure_future
-except AttributeError:
-    ensure_future = asyncio.async
-
+ensure_future = asyncio.ensure_future
 
 def create_future(loop):
     try:
